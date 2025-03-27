@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Travelista Tours</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            max-width: 900px;
+            width: 150%;
+            height: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .left-section {
+            flex: 1;
+            background: url('toor.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(5, 0, 0);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .left-section h2 {
+            font-size: 26px;
+            font-family: cursive;
+        }
+
+        .left-section p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .right-section {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-section h2 {
+            color: #0078d4;
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #005fa3;
+        }
+
+        .forgot-password {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .forgot-password a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+
+        .or-divider {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons img {
+            width: 35px;
+            cursor: pointer;
+        }
+
+        .register-link {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .register-link a {
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section (Image & Text) -->
+        <div class="left-section">
+            <h2>Travelista Tours</h2>
+            <p>Travel is the only purchase that enriches you in ways beyond material wealth.</p>
+        </div>
+
+        <!-- Right Section (Login Form) -->
+        <div class="right-section">
+            <h2>Welcome Back</h2>
+            <p style="text-align:center; margin-bottom: 20px;">Login with Email</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="********" required>
+                </div>
+                <p class="forgot-password"><a href="#">Forgot your password?</a></p><br>
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+            <p class="or-divider">OR</p>
+            <div class="social-icons">
+                <img src="google.png" alt="Google">
+                <img src="facebook.png" alt="Facebook">
+                <img src="apple.png" alt="Apple">
+            </div>
+            <p class="register-link">Don't have an account? <a href="signup.html">Register Now</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            if (email && password) {
+                alert("Login successful! Welcome back, " + email);
+            }
+        });
+    </script>
+</body>
+</html>

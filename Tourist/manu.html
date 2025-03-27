@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sub-header {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Destinations to Inspire Adventure</div>
+    <div class="sub-header">Explore these breathtaking destinations with exclusive travel packages.</div>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="boro.png" alt="Bora Bora">
+            <h3>Bora Bora</h3>
+            <p>$1200</p>
+        </div>
+        <div class="card">
+            <img src="malasiya.png" alt="Malaysia">
+            <h3>Malaysia</h3>
+            <p>$900</p>
+        </div>
+        <div class="card">
+            <img src="New Caledonia.png" alt="New Caledonia">
+            <h3>New Caledonia</h3>
+            <p>$1100</p>
+        </div>
+        <div class="card">
+            <img src="indonesia.png" alt="Indonesia">
+            <h3>Indonesia</h3>
+            <p>$850</p>
+        </div>
+        <div class="card">
+            <img src="Paris.png" alt="Paris">
+            <h3>Paris</h3>
+            <p>$1500</p>
+        </div>
+        <div class="card">
+            <img src="Rome.png" alt="Rome">
+            <h3>Rome</h3>
+            <p>$1300</p>
+        </div>
+        <div class="card">
+            <img src="Maui.png" alt="Maui">
+            <h3>Maui</h3>
+            <p>$1250</p>
+        </div>
+        <div class="card">
+            <img src="Tahiti.png" alt="Tahiti">
+            <h3>Tahiti</h3>
+            <p>$1400</p>
+        </div>
+        <div class="card">
+            <img src="Santorini.png" alt="Santorini">
+            <h3>Santorini</h3>
+            <p>$1350</p>
+        </div>
+        <div class="card">
+            <img src="Dubai.png" alt="Dubai">
+            <h3>Dubai</h3>
+            <p>$1600</p>
+        </div>
+        <div class="card">
+            <img src="Bali.png" alt="Bali">
+            <h3>Bali</h3>
+            <p>$950</p>
+        </div>
+        <div class="card">
+            <img src="Switzerland.png" alt="Switzerland">
+            <h3>Switzerland</h3>
+            <p>$1800</p>
+        </div>
+    </div>
+</body>
+</html>

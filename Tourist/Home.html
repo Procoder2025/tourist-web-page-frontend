@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Website</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #007bff;
+        }
+        .auth-buttons button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background: transparent;
+            border: 1px solid #007bff;
+            color: #007bff;
+        }
+
+        .signup-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Hero Section with Slideshow */
+        .hero {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 40%;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .search-bar input, .search-bar button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-bar button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+         /* Destinations */
+        .destinations {
+            text-align: center;
+            padding: 50px 10%;
+        }
+
+        .destination-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 250px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            text-align: center;
+            padding: 50px 10%;
+        }
+
+        .review {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .review p {
+            font-size: 18px;
+            font-style: italic;
+            color: #666;
+        }
+
+        .review h4 {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .profile-pics img {
+            width: 40px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">✈️ Travelling</div>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login-btn">Log in</button>
+            <button class="signup-btn">Sign up</button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="hero">
+        <div class="slideshow-container">
+            <img class="slides" src="Hom.png" alt="Travel Image 1">
+            <img class="slides" src="Hom1.png" alt="Travel Image 2">
+            <img class="slides" src="Hom2.png" alt="Travel Image 3">
+            <img class="slides" src="Hom3.png" alt="Travel Image 4">
+        </div>
+        <div class="hero-content">
+            <h1>Enjoy your life and go explore ✈️</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Location">
+                <input type="date">
+                <button onclick="searchTravel()">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Destinations -->
+    <section class="destinations">
+        <h2>Explore Our Top Destination</h2>
+        <div class="destination-grid">
+            <div class="card">
+                <img src="des5.png" alt="Destination 1">
+                <h3>Enjoy the smart city in the water</h3>
+                <p>Maldives</p>
+            </div>
+            <div class="card">
+                <img src="des4.png" alt="Destination 2">
+                <h3>Luxury Beach Resorts</h3>
+                <p>Hawaii</p>
+            </div>
+            <div class="card">
+                <img src="des.png" alt="Destination 3">
+                <h3>Historical Wonders</h3>
+                <p>Rome</p>
+            </div>
+             <div class="card">
+                <img src="des6.png" alt="Destination 3">
+                <h3>Eiffel Tower</h3>
+                <p>London</p>
+            </div>
+             <div class="card">
+                <img src="des7.png" alt="Destination 3">
+                <h3>‘Big Ben’ clock tower</h3>
+                <p>Paris</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="testimonials">
+        <h2>What Our Customers Say About Us</h2>
+        <br>
+        <div class="review">
+            <p>“This was the best travel experience ever! Everything was well planned and perfect.”</p><br>
+            <h4>- Mitchell Marsh</h4>
+            <div class="profile-pics">
+                <img src="user1.png" alt="User 1">
+                <img src="user4.png" alt="User 2">
+                <img src="user2.png" alt="User 3">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function searchTravel() {
+            alert('Searching for the best travel deals...');
+        }
+    </script>
+</body>
+</html>

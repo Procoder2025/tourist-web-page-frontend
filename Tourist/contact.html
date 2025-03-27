@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            background: white;
+            max-width: 1000px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-section {
+            position: relative;
+            flex: 1;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .orange-box {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(237, 233, 233, 0.3);
+            color: rgb(10, 10, 10);
+            padding: 10px;
+            width: 70%;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .content {
+            padding-left: 40px;
+            flex: 1;
+        }
+
+        .content h2 {
+            color: #c47a3f;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-icon {
+            background: #c47a3f;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .contact-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .image-credit {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .image-credit a {
+            color: #c47a3f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="travell.png" alt="Travel Suitcase">
+            <div class="orange-box">
+                Comfort produce husband boy her had hearing. Law others theirs passed but wishes. 
+                You day real less till dear read. Considered use dispatched melancholy sympathize discretion led.
+            </div>
+        </div>
+        <div class="content">
+            <h2>Contact Us...</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                There are many variations of passages of Lorem ipsum available, but majority have suffered alteration in some form.</p>
+                <p>the injected hun or randomised words wh even slightly believable going to use a passage of Lorem ip you need to be sure there l't thing embor rassing hidden in the middle of text Alt the Lorem ipsum generators on the Internet tend to reptat predefined chunks as necessary, making this the first generator on Internet.</p>
+            <div class="contact-info">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                    <p>Call Us Anytime</p>
+                    <strong id="phone-number">+92 555 77 88</strong>
+                </div>
+            </div>
+            <p class="image-credit">Images from <a href="#">Freepik</a></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript: Click to Copy Phone Number
+        document.getElementById("phone-number").addEventListener("click", function() {
+            navigator.clipboard.writeText(this.textContent).then(() => {
+                alert("Phone number copied to clipboard!");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - Explore the World</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Full-Screen Background */
+        body {
+            background: url('home1.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 50px; /* Adjust left spacing */
+        }
+
+        /* Hero Section - Left Align */
+        .hero {
+            text-align: left;
+            color: white;
+            max-width: 400px;
+        }
+
+        .tagline {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            margin-top: 5px;
+        }
+
+        /* Buttons */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .discover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: rgb(20, 7, 7);
+            margin-right: 10px;
+        }
+
+        .know-more {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="content">
+            <p class="tagline">BEST TRAVEL AGENCY</p>
+            <h1>EXPLORE</h1>
+            <p class="subtitle">THE WORLD</p>
+            <div class="buttons">
+                <button class="btn discover">DISCOVER</button>
+                <button class="btn know-more">KNOW MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector(".discover").addEventListener("click", function () {
+            alert("Explore the world with our best travel agency!");
+        });
+
+        document.querySelector(".know-more").addEventListener("click", function () {
+            alert("Know more about our travel packages and exclusive deals!");
+        });
+    </script>
+</body>
+</html>

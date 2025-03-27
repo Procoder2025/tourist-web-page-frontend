@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: red;
+        }
+
+        .contact {
+            font-size: 14px;
+        }
+
+        .contact span {
+            color: red;
+        }
+
+        .hero {
+            background: url('check2.png') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar {
+            margin-top: 15px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .featured {
+            padding: 20px;
+            background: #f8f8f8;
+        }
+
+        .logos span {
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .destinations {
+            padding: 30px;
+        }
+
+        .destination-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .destination-grid img {
+            width: 250px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"> <span class="highlight"> ✈️ TRAVEL</span>  WEBSITE </div>
+        <div class="contact">CALL US TOLL FREE <span>(800) 123-7890</span></div>
+    </header>
+
+    <section class="hero">
+        <h1>Book Online</h1>
+        <p>It's Fast, Easy, and Secure</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by Destination or Hotel Name">
+            <button onclick="searchDestination()">Search</button>
+        </div>
+        <p class="tagline">Your shortcut to the world’s best luxury hotels</p>
+    </section>
+
+    <section class="featured">
+        <p>FEATURED ON:</p>
+        <div class="logos">
+
+<span>TIME:<label for="cars"></label>
+<select id="cars">
+    <option value="volvo">00:00</option>
+  <option value="volvo">10:30</option>
+  <option value="saab">12:30</option>
+  <option value="opel">02:30</option>
+  <option value="audi">05:30</option>
+</select></span>
+            <span>MSN</span>
+            <span>Mashable</span>
+            <span>The Independent</span>
+            <span>Travel + Leisure</span>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <h2>Our Most Popular Destinations</h2>
+        <div class="destination-grid">
+            <img src="Paris.png" alt="City 1">
+            <img src="Rome.png" alt="City 2">
+            <img src="Santorini.png" alt="City 3">
+            <img src="New Caledonia.png" alt="City 2">
+            <img src="Bali.png" alt="City 3">
+        </div>
+    </section>
+
+    <script>
+        function searchDestination() {
+            let searchQuery = document.getElementById("searchInput").value;
+            if (searchQuery.trim() === "") {
+                alert("Please enter a destination or hotel name.");
+            } else {
+                alert("Searching for: " + searchQuery);
+            }
+        }
+    </script>
+
+</body>
+</html>
